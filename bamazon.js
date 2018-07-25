@@ -1,5 +1,6 @@
-var mysql = require('mysql')
-var inquirer = require('inquirer')
+const mysql = require('mysql')
+const inquirer = require('inquirer')
+const keys = require('./keys')
 
 //create the connection to the database we created
 
@@ -11,7 +12,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "Athlon64!!",
+  password: hdnpw,
   database: "bamazon_DB"
 });
 
