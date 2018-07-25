@@ -103,11 +103,11 @@ function runSearch() {
   function placeOrder(results, orderQuant){
     let itemIDD = results[0].item_id
     var updatedQuant = results[0].stock_quantity - parseInt(orderQuant) 
-    console.log("order quant: " + orderQuant)
-    console.log('stock:' ,  typeof  results[0].stock_quantity)
-     console.log(results)
-     console.log("updated stock should be: " + updatedQuant)
-     console.log("this is the item D: " + itemIDD)
+    // console.log("order quant: " + orderQuant)
+    // console.log('stock:' ,  typeof  results[0].stock_quantity)
+    //  console.log(results)
+    //  console.log("updated stock should be: " + updatedQuant)
+    //  console.log("this is the item D: " + itemIDD)
 
     var updateInfo = `UPDATE products SET stock_quantity = ? WHERE item_id = ?`
         connection.query(updateInfo, [ updatedQuant, itemIDD ], function (err, resultA) {
